@@ -1,9 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:chat_app/View/view_profile_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../main.dart';
-import '../View/profile_view.dart';
 import '../models/chat_user_model.dart';
 
 class ProfileDialog extends StatelessWidget {
@@ -61,7 +61,7 @@ class ProfileDialog extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (_) => ProfileView(user: user)));
+                              builder: (_) => ViewProfileScreen(user: user)));
                     },
                     minWidth: 0,
                     padding: const EdgeInsets.all(0),

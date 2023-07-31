@@ -20,6 +20,9 @@ class APIs {
   // for accessing firebase storage
   static FirebaseStorage storage = FirebaseStorage.instance;
 
+// to return current user
+  static User get user => auth.currentUser!;
+
   // for storing self information
   static ChatUser me = ChatUser(
       id: user.uid,
@@ -32,9 +35,6 @@ class APIs {
       lastActive: '',
       pushToken: '');
 
-  // to return current user
-  static User get user => auth.currentUser!;
-
   // for accessing firebase messaging (Push Notification)
   static FirebaseMessaging fMessaging = FirebaseMessaging.instance;
 
@@ -45,7 +45,7 @@ class APIs {
     await fMessaging.getToken().then((t) {
       if (t != null) {
         me.pushToken = t;
-        log('Push Token: $t');
+        print('***********Push Token*******: $t');
       }
     });
 
@@ -148,7 +148,7 @@ class APIs {
         id: user.uid,
         name: user.displayName.toString(),
         email: user.email.toString(),
-        about: "Hey, I'm using We Chat!",
+        about: "Hey, I'm using Chat App!",
         image: user.photoURL.toString(),
         createdAt: time,
         isOnline: false,
