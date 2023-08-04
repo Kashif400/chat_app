@@ -1,8 +1,10 @@
+import 'package:chat_app/View/phone%20auth/login_with_phone.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import 'View/home_view.dart';
 import 'View/login_view.dart';
 import 'View/splash_view.dart';
 
@@ -45,6 +47,8 @@ class MyApp extends StatelessWidget {
       // home: SignUpView(),
       // home: LoginView(),
       home: const SplashView(),
+      // home: LoginWithPhoneNumber(),
+      // home: HomeView(),
     );
   }
 }

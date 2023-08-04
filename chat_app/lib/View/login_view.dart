@@ -41,8 +41,8 @@ class _LoginViewState extends State<LoginView> {
       Navigator.pop(context);
 
       if (user != null) {
-        print('\nUser: ${user.user}');
-        print('\nUserAdditionalInfo: ${user.additionalUserInfo}');
+        log('\nUser: ${user.user}');
+        log('\nUserAdditionalInfo: ${user.additionalUserInfo}');
 
         if ((await APIs.userExists())) {
           Navigator.pushReplacement(
